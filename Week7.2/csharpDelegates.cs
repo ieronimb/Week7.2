@@ -8,17 +8,7 @@ namespace Week7._2
 {
     class CsharpDelegates
     {   //Delegate example
-        public delegate void Print(int value);
-        //Delegate as a Parameter
-        public static void PrintHelper(Print delegateFunc, int numToPrint)
-        {
-            delegateFunc(numToPrint);
-        }
-        //Multicast delegate
-        public static void PrintHexadecimal(int dec)
-        {
-            Console.WriteLine("Hexadecimal: {0:X}", dec);
-        }
+        public delegate void Print(int value);        
 
         static void Main(string[] args)
 
@@ -44,8 +34,14 @@ namespace Week7._2
             PrintHelper(PrintMoney, 8795);
 
             //Multicast delegate
+
+            //Remove existing function from a delegate object
             newDel -= PrintHexadecimal;
             newDel(47894);
+
+            //Adding a function to delegate object
+            newDel += PrintHexadecimal;
+            newDel(58792);
 
 
             Console.ReadKey();
@@ -59,6 +55,16 @@ namespace Week7._2
         public static void PrintMoney(int money)
         {
             Console.WriteLine("Money: {0:C}", money);
+        }
+        //Delegate as a Parameter
+        public static void PrintHelper(Print delegateFunc, int numToPrint)
+        {
+            delegateFunc(numToPrint);
+        }
+        //Multicast delegate
+        public static void PrintHexadecimal(int dec)
+        {
+            Console.WriteLine("Hexadecimal: {0:X}", dec);
         }
     }
 }
