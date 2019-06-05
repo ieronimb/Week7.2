@@ -28,6 +28,7 @@ namespace Week7._2
             newDel(2500);
             newDel(1784);
 
+
             //PrintMoney
             newDel = PrintMoney;
             newDel(8796);
