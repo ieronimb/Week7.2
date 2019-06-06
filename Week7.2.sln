@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ActionDelegate", "ActionDel
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PredicateDelegate", "PredicateDelegate\PredicateDelegate.csproj", "{785D0498-2733-48EE-915F-D8B0C1F69745}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Linq", "LinqLambdaExpressions\Linq.csproj", "{7704A6B5-EC1D-4B1E-84B9-5757C365410D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{785D0498-2733-48EE-915F-D8B0C1F69745}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{785D0498-2733-48EE-915F-D8B0C1F69745}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{785D0498-2733-48EE-915F-D8B0C1F69745}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7704A6B5-EC1D-4B1E-84B9-5757C365410D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7704A6B5-EC1D-4B1E-84B9-5757C365410D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7704A6B5-EC1D-4B1E-84B9-5757C365410D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7704A6B5-EC1D-4B1E-84B9-5757C365410D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

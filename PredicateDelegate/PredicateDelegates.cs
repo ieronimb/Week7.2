@@ -29,6 +29,7 @@ namespace PredicateDelegate
             Predicate<string> LambdaisUpper = s => s.Equals(s.ToUpper());
             bool lambdaResult = LambdaisUpper("LAMBDA");
             Console.WriteLine(lambdaResult);
+
             Console.ReadKey();
         }
     }
