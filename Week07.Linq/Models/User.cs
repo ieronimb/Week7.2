@@ -17,5 +17,6 @@
         public string Website { get; set; }
 
         public Company Company { get; set; }
+        
     }
 }
