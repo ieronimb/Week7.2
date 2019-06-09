@@ -14,7 +14,7 @@
             var allPosts = ReadPosts("posts.json");
         /*--------------------------------------------------------------------------------------------------------------------------------------------------------------*/
             Console.WriteLine("\n|---------------------------1 - find all users having email ending with <.net>--------------------------------------------------------|");
-            //Variant 1
+            //Linq query
             var netUsers = from u in allUsers
                            where u.Email.EndsWith(".net")
                            select u;           
@@ -23,7 +23,7 @@
                 Console.WriteLine(user.Email);
             }
 
-                //Lamda variant
+            //Lambda expressions
             var LinqNetUsers = allUsers.Where(x => x.Email.EndsWith(".net"));              
             foreach (var user1 in LinqNetUsers)
             {
@@ -32,7 +32,7 @@
 
         /*--------------------------------------------------------------------------------------------------------------------------------------------------------------*/
             Console.WriteLine("\n|---------------------------2 - find all posts for users having email ending with <.net>----------------------------------------------|");
-            //Variant 1
+            //Linq query
             var postEmailJoin = from post in allPosts
                                 join netEmail in netUsers on post.UserId equals netEmail.Id
                                 select new
@@ -46,7 +46,7 @@
             {
                 Console.WriteLine($"User's: Email {obj.UserEmail};\nName {obj.UserName};\nPost title: { obj.PostTitle};\nPost body: {obj.PostBody}");
             }
-                //Lamda variant
+            //Lambda expressions
             var LinqPostEmailJoin = LinqNetUsers.Join(
                                     allPosts,
                                     linqNetEmail => linqNetEmail.Id,
@@ -65,7 +65,7 @@
             }
         /*--------------------------------------------------------------------------------------------------------------------------------------------------------------*/
             Console.WriteLine("\n|--------------------------- 3 - print number of posts for each user------------------------------------------------------------------|");         
-
+                        
             var numOfPosts = from numPost in allPosts
                              group numPost by numPost.UserId into numbPosts //http://www.csharp-examples.net/linq-count/
                              select new
@@ -78,10 +78,21 @@
             {
                 Console.WriteLine($"User number {obj.Users} has {obj.Count} posts");
             }
-        /*--------------------------------------------------------------------------------------------------------------------------------------------------------------*/
-            Console.WriteLine("\n|---------------------------4 - find all users that have lat and long negative--------------------------------------------------------|");
-           
+            //Lambda expressions
+            var LamNumOfPosts = allPosts.GroupBy(p => p.UserId).Select(g => new
+            {
+                Users = g.Key,
+                Count = g.Count(),
+            });
+            foreach (var obj in LamNumOfPosts)
+            {
+                Console.WriteLine($"User number {obj.Users} has {obj.Count} posts");
+            }
 
+            /*--------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+            Console.WriteLine("\n|---------------------------4 - find all users that have lat and long negative--------------------------------------------------------|");
+
+            //Lambda expressions
             var negGeo = allUsers.Where(s => s.Address.Geo.Lng.Contains("-") && s.Address.Geo.Lat.Contains("-"));
 
             foreach (var obj in negGeo)
@@ -96,7 +107,7 @@
             var longBody = allPosts.Max();           
             Console.WriteLine("Longest body from userid {0} and id {1} is:\n {2} ", longBody.UserId,longBody.Id, longBody.Body);
 
-            //Lamda variant
+            //Lambda expressions
             var linqLongBody = allPosts.OrderByDescending(s => s.Body.Length).First();
             Console.WriteLine("Longest body from userid {0} and id {1} is:\n {2} ", linqLongBody.UserId, linqLongBody.Id, linqLongBody.Body);
         /*--------------------------------------------------------------------------------------------------------------------------------------------------------------*/
@@ -105,15 +116,15 @@
 
         /*--------------------------------------------------------------------------------------------------------------------------------------------------------------*/
             Console.WriteLine("\n|---------------------------7 - select all addresses in a new List<Address>. print the list.-------------------------|");
-            
-            //Variant 1
+
+            //Linq query
             var adresses = from a in allUsers
                            select a.Address;
             foreach (var obj in adresses)
             {
                 Console.WriteLine($"City: {obj.City}/ Street: {obj.Street}/ Suit:  {obj.Suite}/ ZipCode: {obj.Zipcode}/ Geo Lat: {obj.Geo.Lat} and Lng: {obj.Geo.Lng}");
             }
-            //Lambda variant
+            //Lambda expressions
             var adressesList = allUsers.Select(x => x.Address).ToList();
             foreach (var obj in adressesList)
             {
@@ -145,8 +156,8 @@
 
         /*--------------------------------------------------------------------------------------------------------------------------------------------------------------*/
             Console.WriteLine("\n|---------------------------11 - order users by zip code------------------------------------------------------------------------------|");
-            
-            //Variant 1
+
+            //Linq query
             var orderUser = from s in allUsers
                             orderby s.Address.Zipcode
                             select s;
@@ -154,7 +165,7 @@
             {
                 Console.WriteLine($"Name: {obj.Name}/ ZipCode: {obj.Address.Zipcode}");
             }
-            //Lambda variant
+            //Lambda expressions
             var LambaOrderUser = allUsers.OrderBy(s => s.Address.Zipcode);
             foreach (var obj in LambaOrderUser)
             {

@@ -15,7 +15,19 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Linq", "LinqLambdaExpressio
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Week7.Linq", "Week07.Linq\Week7.Linq.csproj", "{F6C9B286-1083-483A-8C10-98DFD28056B3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StringBuilderSubstring", "StringBuilder\StringBuilderSubstring.csproj", "{C79E33B7-30F5-4A14-B5B3-789AF761871A}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ex1StringBuilderSubstring", "StringBuilder\Ex1StringBuilderSubstring.csproj", "{C79E33B7-30F5-4A14-B5B3-789AF761871A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ex2IEnumerableExtentions", "IEnumerableExtensions\Ex2IEnumerableExtentions.csproj", "{E9658DF7-E75D-4980-BDDE-2C33ECD4D0E5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ex3Ex4Ex5", "Ex3Ex4Ex5\Ex3Ex4Ex5.csproj", "{FEBD86A8-DE59-48EB-BA56-22A0D83ABE42}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DivisibleNumbers", "DivisibleNumbers\DivisibleNumbers.csproj", "{41B748DE-A8AF-4E3B-B5BF-A9B358D93276}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StudentLinqPractice", "StudentLinqPractice\StudentLinqPractice.csproj", "{A1BC0DA2-AD50-41A5-A36F-19818F9BE241}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LongestString", "LongestString\LongestString.csproj", "{62BB71B3-01F6-42BE-9BC7-F5EB401F6ADE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GroupedbyGroupNumber", "GroupedbyGroupNumber\GroupedbyGroupNumber.csproj", "{60F0C1DD-BE99-4ED3-A0CD-EACECB3B1B68}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -51,6 +63,30 @@ Global
 		{C79E33B7-30F5-4A14-B5B3-789AF761871A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C79E33B7-30F5-4A14-B5B3-789AF761871A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C79E33B7-30F5-4A14-B5B3-789AF761871A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E9658DF7-E75D-4980-BDDE-2C33ECD4D0E5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E9658DF7-E75D-4980-BDDE-2C33ECD4D0E5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E9658DF7-E75D-4980-BDDE-2C33ECD4D0E5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E9658DF7-E75D-4980-BDDE-2C33ECD4D0E5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FEBD86A8-DE59-48EB-BA56-22A0D83ABE42}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FEBD86A8-DE59-48EB-BA56-22A0D83ABE42}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FEBD86A8-DE59-48EB-BA56-22A0D83ABE42}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FEBD86A8-DE59-48EB-BA56-22A0D83ABE42}.Release|Any CPU.Build.0 = Release|Any CPU
+		{41B748DE-A8AF-4E3B-B5BF-A9B358D93276}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{41B748DE-A8AF-4E3B-B5BF-A9B358D93276}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{41B748DE-A8AF-4E3B-B5BF-A9B358D93276}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{41B748DE-A8AF-4E3B-B5BF-A9B358D93276}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A1BC0DA2-AD50-41A5-A36F-19818F9BE241}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A1BC0DA2-AD50-41A5-A36F-19818F9BE241}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A1BC0DA2-AD50-41A5-A36F-19818F9BE241}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A1BC0DA2-AD50-41A5-A36F-19818F9BE241}.Release|Any CPU.Build.0 = Release|Any CPU
+		{62BB71B3-01F6-42BE-9BC7-F5EB401F6ADE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{62BB71B3-01F6-42BE-9BC7-F5EB401F6ADE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{62BB71B3-01F6-42BE-9BC7-F5EB401F6ADE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{62BB71B3-01F6-42BE-9BC7-F5EB401F6ADE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{60F0C1DD-BE99-4ED3-A0CD-EACECB3B1B68}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{60F0C1DD-BE99-4ED3-A0CD-EACECB3B1B68}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{60F0C1DD-BE99-4ED3-A0CD-EACECB3B1B68}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{60F0C1DD-BE99-4ED3-A0CD-EACECB3B1B68}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

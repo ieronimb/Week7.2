@@ -13,7 +13,7 @@ namespace StringBuilderExtension
         {
             StringBuilder Current = new StringBuilder();
 
-            for (int i = Index; i < i + Length; i++)
+            for (int i = Index; i <Index + Length; i++)
             {
                 Current.Append(sb[i]);
             }
