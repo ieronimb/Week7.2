@@ -4,7 +4,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Ex3Ex4Ex5.Class;
-using Ex3Ex4Ex5.Methods;
 
 namespace Ex3Ex4Ex5
 {

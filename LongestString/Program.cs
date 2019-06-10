@@ -13,7 +13,7 @@ namespace LongestString
         Use LINQ.*/
         static void Main(string[] args)
         {
-            var array = new string[] { "Telerik", "Academy", "LINQ", "System", "Collections", "Threading" };
+            var array = new string[] { "", "works", "course", "System", "Generic List"};
             string maxLength = array.OrderByDescending(x => x.Length).First();
 
             Console.WriteLine("The string with max length is: " + maxLength);

@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 namespace Week07.Linq.Models
 {
     public class UserPosts
-    {
+    {        
         public User User { get; set; }
         public List<Post> Posts { get; set; }
     }

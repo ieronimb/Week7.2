@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 namespace StudentLinqPractice
 {
 
-    class Program    {
+    class StudentLinqPractice    {
         
 
         /* Problem 9. Student groups       
@@ -112,8 +112,12 @@ namespace StudentLinqPractice
         static void Main(string[] args)
         {
             List<Student> list = new List<Student>()
-            {                
-                
+            {
+                new Student("Popescu","Ionut","FN-006","07504329","popescu@gabv.bg",new List<int>{ 6, 9,6,7},new Group(4, "Mathematics")),
+                new Student("Ignatescu","Ionut","FN-005","0504329","ignatescu@gabv.bg",new List<int>{4,6,8,5},new Group(1, "Geographics")),
+                new Student("Dima","Gabriel","FN-0036","054329","dima@aol.com",new List<int>{6,9,6,7},new Group(3, "Mathematics")),
+                new Student("Ionescu","Ionut","FN-006","0704329","ionescu@yahoo.com",new List<int>{6,4,7,7},new Group(2, "Geographics")),
+                new Student("Petranu","Ionut","FN-001","07504329","petranu@gmail.com",new List<int>{76,4,6,7},new Group(1, "Physics")),
             };
 
             StudentsByGroupNumberLinq(list);

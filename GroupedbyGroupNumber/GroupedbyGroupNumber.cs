@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace GroupedbyGroupNumber
 {
-    class Program
+    class GroupedbyGroupNumber
     {
         /*Problem 18. Grouped by GroupNumber
          Create a program that extracts all students grouped by GroupNumber and then prints them to the console.
@@ -19,10 +19,10 @@ namespace GroupedbyGroupNumber
                            orderby newGroup.Key
                            select newGroup;
 
-            Console.WriteLine("Print students grouped by GroupName: (Using LINQ query) ");
-            foreach (var element in list)
+            Console.WriteLine("Linq: Print students grouped by GroupNumber:");
+            foreach (var obj in list)
             {
-                Console.WriteLine("Full name: {0} {1} \nGroup name: {2}", element.FirstName, element.LastName, element.GroupNumber);
+                Console.WriteLine($"First Name: { obj.FirstName}; Last Name: {obj.LastName}; GroupNumber: {obj.GroupNumber}.");
             }
         }
 
@@ -32,21 +32,25 @@ namespace GroupedbyGroupNumber
         {
             var students = list.GroupBy(x => x.GroupNumber).OrderBy(y => y.Key);
 
-            Console.WriteLine("Print students grouped by GroupName: (Using Lambda expression) ");
-            foreach (var element in list)
+            Console.WriteLine("Linq: Print students grouped by GroupNumber: ");
+            foreach (var obj in list)
             {
-                Console.WriteLine("Full name: {0} {1} \nGroup name: {2}", element.FirstName, element.LastName, element.GroupNumber);
+                Console.WriteLine($"First Name: { obj.FirstName}; Last Name: {obj.LastName}; GroupNumber: {obj.GroupNumber}.");
             }
         }
         static void Main(string[] args)
         {
             List<Student> list = new List<Student>()
             {
-               
+               new Student("Popescu","Mihai","AN-006"),
+               new Student("Mitrea","Ionut","FN-016"),
+               new Student("Maitrei","Oana","AN-006"),
+               new Student("Mihnea","Cornel","FN-016")
             };
 
             GroupByGrouNumberLinq(list);
             GroupByGrouNumberLambda(list);
+            Console.ReadKey();
         }
     }
 }

@@ -108,11 +108,11 @@
             Console.WriteLine("Longest body from userid {0} and id {1} is:\n {2} ", longBody.UserId,longBody.Id, longBody.Body);
 
             //Lambda expressions
-            var linqLongBody = allPosts.OrderByDescending(s => s.Body.Length).First();
+            var linqLongBody = allPosts.OrderByDescending(s => s.Body.Length).First();           
             Console.WriteLine("Longest body from userid {0} and id {1} is:\n {2} ", linqLongBody.UserId, linqLongBody.Id, linqLongBody.Body);
-        /*--------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+            /*--------------------------------------------------------------------------------------------------------------------------------------------------------------*/
             // 6 - print the name of the employee that have post with longest body.
-
+           
 
         /*--------------------------------------------------------------------------------------------------------------------------------------------------------------*/
             Console.WriteLine("\n|---------------------------7 - select all addresses in a new List<Address>. print the list.-------------------------|");
@@ -148,13 +148,25 @@
             Console.WriteLine($"The employee {maxLng.Name} with max long {maxLng.Address.Geo.Lng} ");
 
         /*--------------------------------------------------------------------------------------------------------------------------------------------------------------*/
-            
+            Console.WriteLine("\n|---------------------------10 - create a new class: public class UserPosts { public User User {get; set}; public List<Post> Posts {get; set} }---------------------------------------------------------------------|");
             // 10 - create a new class: public class UserPosts { public User User {get; set}; public List<Post> Posts {get; set} }
             //    - create a new list: List<UserPosts>
-            //    - insert in this list each user with his posts only
+            //    - insert in this list each user with his posts only         
             List<UserPosts> myList = new List<UserPosts>() { };
 
-        /*--------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+            var newList = (from nl in allPosts
+                           where nl.Body != ""
+                           select new 
+                           {
+                               User = nl.UserId,
+                               Posts = nl.Body
+                           });
+            foreach (var obj in newList)
+            {
+                Console.WriteLine($"User ID: {obj.User}/ Title post: {obj.Posts}");
+            }
+
+            /*--------------------------------------------------------------------------------------------------------------------------------------------------------------*/
             Console.WriteLine("\n|---------------------------11 - order users by zip code------------------------------------------------------------------------------|");
 
             //Linq query
